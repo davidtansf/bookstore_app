@@ -7,4 +7,14 @@ RSpec.describe AuthorsController, :type => :controller do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe "GET #show" do
+
+    let(:author) { Fabricate(:author) }
+
+    it "returns a successful http request status code" do
+      get :show, id: author.id
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
