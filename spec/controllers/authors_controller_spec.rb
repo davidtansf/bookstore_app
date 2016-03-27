@@ -13,7 +13,6 @@ RSpec.describe AuthorsController, :type => :controller do
     let(:author) { Fabricate(:author) }
 
     it "returns a successful http request status code" do
-      byebug
       get :show, id: author.id
       expect(response).to have_http_status(:success)
     end
@@ -79,7 +78,7 @@ RSpec.describe AuthorsController, :type => :controller do
       it "updates the modified author object" do
         put :update , author: Fabricate.attributes_for(:author, first_name: "Mike"), id: john.id
 
-        # expect(Author.last.first_name).to eq "Mike"
+        expect(Author.last.first_name).to eq "Mike"
         expect(Author.last.first_name).not_to eq "John"
       end
 
