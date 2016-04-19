@@ -54,6 +54,7 @@ end
 
 group :test do
   gem 'capybara', '2.4.4'
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do
@@ -61,5 +62,3 @@ group :development do
   gem 'pry'
   gem 'pry-nav'
 end
-
-
