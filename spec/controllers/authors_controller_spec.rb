@@ -121,7 +121,7 @@ RSpec.describe AuthorsController, :type => :controller do
     it "deletes the author with the given id" do
       delete :destroy, id: author.id
 
-      expect(Author.count). to eq 0
+      expect(Author.count).to eq 0
     end
 
     it "sets the flash message" do
