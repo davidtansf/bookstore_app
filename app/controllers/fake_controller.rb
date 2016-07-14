@@ -1,4 +1,4 @@
 class FakeController
-  def alpha
+  def gamma
   end
 end
