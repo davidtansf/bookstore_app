@@ -1,5 +1,5 @@
 class FakeController
-  def alpha
+  def gamma
     #lol
   end
 end
